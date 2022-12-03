@@ -2,7 +2,7 @@
 .header {
 	width: 100%;
 	min-height: 12rem;
-	background-image: url("/images/bg-mobile-dark.webp");
+	background-image: url("./images/bg-mobile-dark.webp");
 	background-size: cover;
 	background-repeat: no-repeat;
 	display: flex;
@@ -12,7 +12,7 @@
 	transition: all 450ms ease;
 
 	@media (min-width: 760px) {
-		background-image: url("/images/bg-desktop-dark.webp");
+		background-image: url("./images/bg-desktop-dark.webp");
 		justify-content: space-around;
 		min-height: 20rem;
 		align-items: center;
