@@ -42,7 +42,7 @@ const createTask = function (e: KeyboardEvent) {
 		li.classList.add("dark-theme-components");
 		li.dataset.number = `${taskCounter}`;
 		circle.classList.add("circle");
-		check.src = "../images/icon-check.svg";
+		check.src = "./images/icon-check.svg";
 		check.classList.add("check");
 		check.classList.add("hidden");
 		span.classList.add("task-text");
