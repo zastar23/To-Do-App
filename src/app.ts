@@ -8,12 +8,12 @@ const body = document.querySelector("body");
 themeToggle.addEventListener("click", function changeTheme() {
 	if (themeToggle.dataset.pressed === "false") {
 		themeToggle.setAttribute("data-pressed", "true");
-		themeToggle.src = "/images/icon-moon.svg";
+		themeToggle.src = "./images/icon-moon.svg";
 		body?.classList.add("light-theme");
 		body?.classList.remove("dark-theme");
 	} else {
 		themeToggle.setAttribute("data-pressed", "false");
-		themeToggle.src = "/images/icon-sun.svg";
+		themeToggle.src = "./images/icon-sun.svg";
 		body?.classList.add("dark-theme");
 		body?.classList.remove("light-theme");
 	}
