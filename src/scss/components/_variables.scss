@@ -1,0 +1,70 @@
+// font
+$font-family: "Josefin Sans";
+$bold: 700;
+$regular: 400;
+$tasks-font: clamp(1rem, calc(1.19rem + 0.79vw), 2.5rem);
+$filters-size: clamp(1rem, calc(0.9rem + 0.52vw), 1.75rem);
+$title-size: clamp(2rem, calc(1.73rem + 1.37vw), 4rem);
+
+// primary colors
+$check-bg: linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+$bright-blue: hsl(220, 98%, 61%);
+
+// dark theme
+$main-bg: hsl(235, 21%, 11%);
+$text: hsl(234, 39%, 85%);
+$Hover-blue: hsl(236, 33%, 92%);
+$components-bg: hsl(235, 24%, 19%);
+
+// light theme
+$vLight-gray: hsl(0, 0%, 98%);
+$vLight-grayish-blue: hsl(236, 33%, 92%);
+$Light-grayish-blue: hsl(233, 11%, 84%);
+$Dark-grayish-blue: hsl(236, 9%, 61%);
+$vDark-grayish-blue: hsl(235, 19%, 35%);
+
+@mixin theme($theme-name, $main-bg, $components-bg, $hover, $text, $title) {
+	.#{$theme-name} {
+		.main {
+			background-color: $main-bg;
+		}
+
+		.input-container {
+			background-color: $components-bg;
+		}
+
+		.circle-input {
+			border-color: $text;
+		}
+
+		.input {
+			background-color: $components-bg;
+			color: $text;
+
+			&::placeholder {
+				color: $text;
+			}
+		}
+
+		.list {
+			background-color: $components-bg;
+			color: $text;
+		}
+
+		.main-filters {
+			background-color: $components-bg;
+			color: $text;
+
+			span:hover {
+				color: $hover;
+			}
+		}
+		.header-title {
+			color: $title;
+		}
+
+		.task {
+			border-bottom: 2px solid $text;
+		}
+	}
+}

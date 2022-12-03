@@ -1,0 +1,41 @@
+@use "./variables" as *;
+
+.main-filters {
+	width: 80%;
+	max-width: 1300px;
+	padding: 1rem;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	gap: 1rem;
+	border-radius: 5px;
+	margin-top: 1rem;
+	transition: all 350ms ease;
+
+	.all,
+	.active,
+	.completed {
+		opacity: 0.5;
+		font-size: $filters-size;
+		cursor: pointer;
+
+		&:hover {
+			color: $bright-blue;
+			opacity: 1;
+		}
+	}
+
+	@media (min-width: 760px) {
+		position: absolute;
+		bottom: 0;
+		gap: 2rem;
+		width: 50%;
+		justify-content: space-evenly;
+		background-color: transparent;
+	}
+}
+
+.active-button {
+	color: $bright-blue;
+}

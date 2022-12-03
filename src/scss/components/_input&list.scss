@@ -1,0 +1,146 @@
+@use "./variables" as *;
+.main {
+	width: 100%;
+	min-height: 80vh;
+}
+
+.main-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	position: relative;
+
+	.input-container {
+		display: flex;
+		align-items: center;
+		justify-content: start;
+		width: 80%;
+		gap: 1rem;
+		max-width: 1300px;
+		min-height: 3rem;
+		border-radius: 5px;
+		margin-block-start: -5rem;
+		margin-block-end: 1rem;
+	}
+
+	.circle-input {
+		width: 1.5rem;
+		height: 1.5rem;
+		border: 1px solid;
+		border-radius: 50%;
+		opacity: 0.7;
+		text-align: center;
+		margin-left: 1rem;
+	}
+
+	.input {
+		width: 80%;
+		background-color: transparent;
+		border: none;
+		font-size: 16px; // change here needed
+		color: $text;
+
+		&::placeholder {
+			font-family: $font-family;
+			font-size: 14px;
+			font-weight: $regular;
+			opacity: 0.7;
+		}
+
+		&:focus {
+			outline: none;
+		}
+	}
+
+	.main-task-list {
+		width: 80%;
+		.list {
+			display: flex;
+			flex-direction: column;
+			list-style: none;
+			width: 100%;
+			border-radius: 5px;
+			max-width: 1300px;
+			margin: 0 auto;
+
+			.task {
+				width: 100%;
+				font-size: $tasks-font;
+				padding: 1rem;
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				justify-content: space-between;
+				gap: 1rem;
+
+				&:first-child {
+					border-top-left-radius: 5px;
+					border-top-right-radius: 5px;
+				}
+
+				.circle {
+					margin: 0;
+				}
+
+				&-text {
+					flex: 1;
+				}
+			}
+
+			.list-counter-and-clear {
+				width: 100%;
+				padding: 1rem;
+				display: flex;
+				flex-direction: row;
+				align-items: end;
+				justify-content: space-between;
+				gap: 1rem;
+				border-bottom-left-radius: 5px;
+				border-bottom-right-radius: 5px;
+				position: relative;
+
+				.counter,
+				.clear {
+					opacity: 0.5;
+					font-size: $filters-size;
+					cursor: pointer;
+				}
+			}
+		}
+	}
+}
+
+.check {
+	width: 100%;
+	height: 100%;
+	background: $check-bg;
+	background-size: cover;
+	border-radius: 50%;
+
+	& > img {
+		margin-block-start: 0.4rem;
+	}
+}
+
+.hidden {
+	opacity: 0;
+}
+
+.circle {
+	width: 1.5rem;
+	height: 1.5rem;
+	border: 1px solid;
+	border-radius: 50%;
+	opacity: 0.7;
+	text-align: center;
+	margin-left: 1rem;
+}
+
+.delete-task {
+	padding: 0.5rem;
+	background-color: transparent;
+	background-image: url("../../../images/icon-cross.svg");
+	border: none;
+	cursor: pointer;
+}

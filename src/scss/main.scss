@@ -1,0 +1,30 @@
+@use "./components/variables" as *;
+@use "./components/header" as *;
+@use "./components/input&list" as *;
+@use "./components/filters" as *;
+@include theme(
+	dark-theme,
+	hsl(235, 21%, 11%),
+	hsl(235, 24%, 19%),
+	hsl(220, 98%, 61%),
+	hsl(234, 39%, 85%),
+	hsl(236, 33%, 92%)
+);
+
+@include theme(
+	light-theme,
+	hsl(0, 0%, 98%),
+	hsl(233, 11%, 84%),
+	hsl(235, 24%, 19%),
+	hsl(235, 21%, 11%),
+	hsl(236, 33%, 92%)
+);
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: $font-family;
+}

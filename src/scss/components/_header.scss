@@ -1,0 +1,33 @@
+@use "./variables" as *;
+.header {
+	width: 100%;
+	min-height: 12rem;
+	background-image: url("/images/bg-mobile-dark.webp");
+	background-size: cover;
+	background-repeat: no-repeat;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	padding: 1.7rem;
+	transition: all 450ms ease;
+
+	@media (min-width: 760px) {
+		background-image: url("/images/bg-desktop-dark.webp");
+		justify-content: space-around;
+		min-height: 20rem;
+		align-items: center;
+	}
+
+	&-title {
+		text-transform: uppercase;
+		letter-spacing: 4px;
+		font-weight: $bold;
+		font-size: $title-size;
+	}
+
+	&-theme-toggle {
+		width: 1.5rem;
+		height: 1.5rem;
+		cursor: pointer;
+	}
+}

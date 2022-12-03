@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="stylesheet" href="./dist/main.css">
+    <script type="module" src="./dist/app.js"></script>
+
+    <title>Frontend Mentor | Todo app</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+        .attribution {
+            font-size: 11px;
+            text-align: center;
+        }
+
+        .attribution a {
+            color: hsl(228, 45%, 44%);
+        }
+    </style>
+</head>
+
+<body class="dark-theme">
+    <header class="header">
+        <h1 class="header-title">Todo</h1>
+        <img class="header-theme-toggle" src="./images/icon-sun.svg" alt="sun icon for changing theme" width="50"
+            height="50" role="button" data-pressed="false">
+    </header>
+    <main class="main">
+        <div class="main-container">
+            <div class="input-container">
+                <div class="circle-input">
+                </div>
+                <input class="input" type="text" placeholder="Create a new todo..." required>
+            </div>
+
+            <div class="main-task-list">
+                <ul class="list">
+                    <li class="list-counter-and-clear">
+                        <span class="counter">0 items left</span>
+                        <span class="clear">Clear Completed</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="main-filters">
+                <span class="all">All</span>
+                <span class="active">Active</span>
+                <span class="completed">Completed</span>
+            </div>
+        </div>
+    </main>
+
+    <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+        Coded by <a href="#">Your Name Here</a>.
+    </div>
+</body>
+
+</html>
